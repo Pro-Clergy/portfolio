@@ -160,8 +160,8 @@ export default function Hero() {
               className="text-text-muted text-lg leading-relaxed max-w-xl mb-10"
             >
               Software Engineer, Full-Stack Developer &amp; UI/UX Designer based in
-              Kumasi, Ghana. I build secure, scalable applications — from mobile apps
-              and web platforms to intelligent data solutions and elegant interfaces.
+              Kumasi, Ghana. I turn ideas into secure, polished products — whether
+              it&apos;s a web platform, a mobile app, or a data-driven solution.
             </motion.p>
 
             {/* CTA Buttons */}

@@ -66,28 +66,31 @@ export default function About() {
             animate={inView ? 'show' : 'hidden'}
           >
             <motion.p variants={fadeUp} className="text-text-muted text-lg leading-relaxed mb-5">
-              I&apos;m Mathias Aidoo, a Computer Science student at Kumasi Technical
-              University with a deep passion for engineering software that makes an impact.
-              My journey in tech started with curiosity about how systems work and quickly
-              grew into a career-defining pursuit spanning multiple disciplines.
+              Hey, I&apos;m Mathias Aidoo — a Computer Science student at Kumasi Technical
+              University who fell in love with building things through code. What started as
+              tinkering with HTML pages in a campus lab has grown into a full-blown obsession
+              with crafting software that actually solves problems people care about.
             </motion.p>
             <motion.p variants={fadeUp} className="text-text-muted text-lg leading-relaxed mb-5">
-              I work across the full stack — from designing intuitive interfaces in Figma
-              to building robust backends and deploying to the cloud. I also develop cross-platform
-              mobile applications with Flutter and React Native, and I&apos;m deeply invested
-              in cybersecurity, applying secure-by-design principles to everything I build.
-              As a system analyst, I enjoy breaking down complex business requirements into
-              clean, maintainable architectures.
+              I don&apos;t believe in staying in one lane. I design interfaces in Figma,
+              build full-stack web apps with React and Node.js, ship cross-platform mobile
+              apps with Flutter, and think deeply about cybersecurity — because what&apos;s the
+              point of building something great if it isn&apos;t secure? I also enjoy the
+              system analyst side of things: sitting with a messy business problem and
+              turning it into a clean, scalable architecture.
             </motion.p>
             <motion.p variants={fadeUp} className="text-text-muted text-lg leading-relaxed mb-5">
-              On the data side, I led a research project analyzing 5,000+ retail transactions
-              across 8 Ghanaian cities using clustering, association rules, and predictive
-              modeling — turning raw numbers into business intelligence.
+              One of my proudest moments was leading a research team that analyzed over
+              5,000 retail transactions across 8 Ghanaian cities — using K-Means clustering,
+              association rules, and predictive modeling to uncover real patterns in how
+              people shop. That project taught me that data tells stories if you know how
+              to listen.
             </motion.p>
             <motion.p variants={fadeUp} className="text-text-muted text-lg leading-relaxed mb-8">
-              When I&apos;m not coding, I&apos;m exploring emerging technologies, contributing
-              to open-source, or brainstorming the next SaaS idea. I believe great
-              software should be functional, beautiful, secure, and accessible to everyone.
+              Outside of work, you&apos;ll find me exploring whatever new technology just
+              dropped, contributing to open-source projects, or sketching out my next SaaS
+              idea on a whiteboard. I believe the best software is functional, beautiful,
+              secure, and built with empathy for the people who use it.
             </motion.p>
 
             {/* Tech stack pills */}
