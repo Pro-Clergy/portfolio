@@ -14,7 +14,15 @@ export async function GET() {
         Message.countDocuments(),
         Project.countDocuments({ featured: true }),
       ]);
-      return NextResponse.json({ visitors, messages, projects });
+
+      return NextResponse.json(
+        { visitors, messages, projects },
+        {
+          headers: {
+            'Cache-Control': 'private, no-store',
+          },
+        },
+      );
     }
 
     return NextResponse.json({

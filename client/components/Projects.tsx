@@ -1,11 +1,11 @@
 'use client';
 
-import React from 'react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ArrowUpRight, Github } from 'lucide-react';
 import api from '@/lib/api';
+import { fallbackProjects } from '@/lib/projects-data';
 import type { Project } from '@/types';
 import SectionHeader from './SectionHeader';
 
@@ -30,76 +30,8 @@ function tagColor(tag: string): string {
   return 'bg-warm/10 text-warm border-warm/20';
 }
 
-/* Fallback project data */
-const fallbackProjects: Project[] = [
-  {
-    _id: '1',
-    title: 'Customer Purchase Behavior Analyzer',
-    slug: 'customer-purchase-analyzer',
-    description:
-      'Data mining system analyzing 5,000+ retail transactions across 8 Ghanaian cities using K-Means clustering, Apriori algorithm, and predictive models (Decision Tree, Random Forest, Logistic Regression).',
-    tags: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib'],
-    category: 'data',
-    image: '',
-    liveUrl: '#',
-    githubUrl: 'https://github.com/Pro-Clergy/customer-purchase-analyzer',
-    featured: true,
-    order: 1,
-    createdAt: '',
-    updatedAt: '',
-  },
-  {
-    _id: '2',
-    title: 'E-Commerce Platform',
-    slug: 'e-commerce-platform',
-    description:
-      'Full-stack online store with user authentication, product catalog, shopping cart, Stripe payment integration, and a responsive admin dashboard.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    category: 'web',
-    image: '',
-    liveUrl: '#',
-    githubUrl: 'https://github.com/Pro-Clergy/e-commerce-platform',
-    featured: true,
-    order: 2,
-    createdAt: '',
-    updatedAt: '',
-  },
-  {
-    _id: '3',
-    title: 'Task Management Dashboard',
-    slug: 'task-management-dashboard',
-    description:
-      'Collaborative project management tool with real-time updates, drag-and-drop Kanban boards, team assignments, and performance analytics.',
-    tags: ['Next.js', 'Tailwind', 'PostgreSQL', 'Socket.io'],
-    category: 'web',
-    image: '',
-    liveUrl: '#',
-    githubUrl: 'https://github.com/Pro-Clergy/task-management-dashboard',
-    featured: true,
-    order: 3,
-    createdAt: '',
-    updatedAt: '',
-  },
-  {
-    _id: '4',
-    title: 'AI Chatbot for Customer Support',
-    slug: 'ai-chatbot-customer-support',
-    description:
-      'Intelligent conversational AI with NLP capabilities, trained on domain-specific data to handle customer inquiries and automate support workflows.',
-    tags: ['Python', 'Flask', 'TensorFlow', 'REST API'],
-    category: 'ai',
-    image: '',
-    liveUrl: '#',
-    githubUrl: 'https://github.com/Pro-Clergy/ai-chatbot-customer-support',
-    featured: true,
-    order: 4,
-    createdAt: '',
-    updatedAt: '',
-  },
-];
-
 export default function Projects() {
-  const [projects, setProjects] = useState<Project[]>(fallbackProjects);
+  const [projects, setProjects] = useState<Project[]>(fallbackProjects as Project[]);
   const [loading, setLoading] = useState(true);
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.05 });
 

@@ -7,7 +7,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import toast from 'react-hot-toast';
-import axios from 'axios';
 import { Mail, MapPin, Briefcase, Send, Loader2, CheckCircle2 } from 'lucide-react';
 import api from '@/lib/api';
 import SectionHeader from './SectionHeader';
@@ -25,9 +24,9 @@ const contactSchema = z.object({
 type ContactForm = z.infer<typeof contactSchema>;
 
 const infoCards = [
-  { icon: Mail, label: 'Email', value: 'mathiaskuamiclergy2002@gmail.com' },
+  { icon: Mail, label: 'Email', value: 'mathiaskuamiclergy2002@gmail.com', href: 'mailto:mathiaskuamiclergy2002@gmail.com' },
   { icon: MapPin, label: 'Location', value: 'Kumasi, Ghana 🇬🇭' },
-  { icon: Briefcase, label: 'Status', value: 'Available for work' },
+  { icon: Briefcase, label: 'Status', value: 'Open to opportunities' },
 ];
 
 export default function Contact() {
@@ -54,10 +53,11 @@ export default function Contact() {
         setSubmitted(true);
       }
     } catch (err: unknown) {
-      if (axios.isAxiosError(err)) {
+      if (err && typeof err === 'object' && 'response' in err) {
+        const axiosErr = err as { response?: { data?: { error?: string; errors?: Array<{ msg: string }> } } };
         const message =
-          err.response?.data?.error ||
-          err.response?.data?.errors?.[0]?.msg ||
+          axiosErr.response?.data?.error ||
+          axiosErr.response?.data?.errors?.[0]?.msg ||
           'Something went wrong. Please try again.';
         toast.error(message);
       } else {
@@ -134,7 +134,19 @@ export default function Contact() {
               </button>
             </motion.div>
           ) : (
-          <form onSubmit={handleSubmit(onSubmit)} className="relative space-y-5">
+          <form onSubmit={handleSubmit(onSubmit)} className="relative space-y-5" noValidate>
+            {/* Honeypot field — hidden from real users, bots fill it */}
+            <div className="absolute -left-[9999px]" aria-hidden="true">
+              <label htmlFor="contact-website">Website</label>
+              <input
+                id="contact-website"
+                name="website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label htmlFor="contact-name" className="block text-text-muted text-xs font-mono uppercase tracking-wider mb-2">Name *</label>

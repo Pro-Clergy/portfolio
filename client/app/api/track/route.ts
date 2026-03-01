@@ -1,22 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { connectDB, Visitor } from '@/lib/db';
+import { rateLimit, getClientIp } from '@/lib/rate-limit';
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-    const { page, referrer } = body;
+    /* ── Rate limit: 30 track events per minute per IP ── */
+    const ip = getClientIp(req);
+    const rl = rateLimit(ip, { limit: 30, windowSeconds: 60 });
+    if (!rl.success) {
+      return NextResponse.json({ success: true }); // silent drop
+    }
 
-    const ip =
-      req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-      req.headers.get('x-real-ip') ||
-      '';
-    const userAgent = req.headers.get('user-agent') || '';
+    const body = await req.json();
+    const page = typeof body.page === 'string' ? body.page.slice(0, 500) : '/';
+    const referrer = typeof body.referrer === 'string' ? body.referrer.slice(0, 1000) : '';
+    const userAgent = (req.headers.get('user-agent') || '').slice(0, 500);
 
     const db = await connectDB();
     if (db) {
       await new Visitor({
         page,
-        referrer: referrer || '',
+        referrer,
         userAgent,
         ip,
         createdAt: new Date(),
@@ -24,8 +28,8 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ success: true });
-  } catch (err) {
-    console.error('Tracking error:', err);
-    return NextResponse.json({ error: 'Tracking failed' }, { status: 500 });
+  } catch {
+    // Tracking is non-critical — never fail the client
+    return NextResponse.json({ success: true });
   }
 }
