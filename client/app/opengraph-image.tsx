@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Mathias — Full-Stack Developer & Data Enthusiast';
+export const alt = 'Mathias Aidoo — Software Engineer & Full-Stack Developer';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -52,12 +52,12 @@ export default async function Image() {
 
         {/* Name */}
         <h1 style={{ fontSize: '64px', fontWeight: 800, color: '#e8e6e3', margin: 0, lineHeight: 1.1 }}>
-          Mathias
+          Mathias Aidoo
         </h1>
 
         {/* Title */}
         <p style={{ fontSize: '28px', color: '#8a8a9a', margin: '16px 0 32px', fontWeight: 400 }}>
-          Full-Stack Developer & Data Enthusiast
+          Software Engineer & Full-Stack Developer
         </p>
 
         {/* Accent line */}
@@ -65,7 +65,7 @@ export default async function Image() {
 
         {/* Tech stack */}
         <div style={{ display: 'flex', gap: '12px' }}>
-          {['React', 'Next.js', 'Node.js', 'Python', 'MongoDB'].map((tech) => (
+          {['React', 'Next.js', 'Flutter', 'Python', 'Node.js'].map((tech) => (
             <span
               key={tech}
               style={{

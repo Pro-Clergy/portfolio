@@ -28,33 +28,37 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mathias.dev';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Mathias — Full-Stack Developer & Data Enthusiast',
+  title: 'Mathias Aidoo — Software Engineer & Full-Stack Developer',
   description:
-    'Portfolio of Mathias, a software developer and data enthusiast based in Kumasi, Ghana. Specializing in full-stack web development, data analysis, machine learning, and UI/UX design.',
+    'Portfolio of Mathias Aidoo, a software engineer based in Kumasi, Ghana. Specializing in full-stack development, mobile apps, cybersecurity, UI/UX design, and data analysis.',
   keywords: [
-    'Mathias',
+    'Mathias Aidoo',
+    'software engineer',
     'developer',
     'portfolio',
     'full-stack',
     'web development',
+    'mobile development',
+    'cybersecurity',
+    'UI/UX design',
     'data analysis',
-    'machine learning',
     'Ghana',
     'Kumasi',
     'React',
     'Next.js',
+    'Flutter',
     'Python',
   ],
-  authors: [{ name: 'Mathias' }],
+  authors: [{ name: 'Mathias Aidoo' }],
   alternates: {
     canonical: siteUrl,
   },
   openGraph: {
-    title: 'Mathias — Full-Stack Developer & Data Enthusiast',
+    title: 'Mathias Aidoo — Software Engineer & Full-Stack Developer',
     description:
-      'Software developer crafting responsive web applications, intelligent data solutions, and elegant interfaces.',
+      'Software engineer building secure, scalable web & mobile applications, intelligent data solutions, and elegant interfaces.',
     url: siteUrl,
-    siteName: 'Mathias Portfolio',
+    siteName: 'Mathias Aidoo Portfolio',
     type: 'website',
     locale: 'en_US',
     images: [
@@ -62,15 +66,15 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Mathias — Full-Stack Developer & Data Enthusiast',
+        alt: 'Mathias Aidoo — Software Engineer & Full-Stack Developer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mathias — Full-Stack Developer & Data Enthusiast',
+    title: 'Mathias Aidoo — Software Engineer & Full-Stack Developer',
     description:
-      'Software developer crafting responsive web applications, intelligent data solutions, and elegant interfaces.',
+      'Software engineer building secure, scalable web & mobile applications, intelligent data solutions, and elegant interfaces.',
     images: ['/og-image.png'],
   },
   icons: {
@@ -107,11 +111,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
-              name: 'Mathias',
+              name: 'Mathias Aidoo',
               url: siteUrl,
-              jobTitle: 'Full-Stack Developer & Data Enthusiast',
+              jobTitle: 'Software Engineer & Full-Stack Developer',
               description:
-                'Software developer crafting responsive web applications, intelligent data solutions, and elegant interfaces.',
+                'Software engineer building secure, scalable web & mobile applications, intelligent data solutions, and elegant interfaces.',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Kumasi',
@@ -123,7 +127,9 @@ export default function RootLayout({
               },
               knowsAbout: [
                 'React', 'Next.js', 'Node.js', 'Python', 'TypeScript',
-                'MongoDB', 'PostgreSQL', 'Machine Learning', 'Data Analysis',
+                'Flutter', 'React Native', 'MongoDB', 'PostgreSQL',
+                'Cybersecurity', 'UI/UX Design', 'Machine Learning',
+                'System Analysis', 'Data Analysis',
               ],
               sameAs: [
                 'https://github.com/Pro-Clergy',

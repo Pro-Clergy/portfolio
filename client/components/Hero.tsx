@@ -4,19 +4,26 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 
 const codeLines = [
-  { type: 'comment', text: '// developer.js' },
+  { type: 'comment', text: '// engineer.ts' },
   { type: 'keyword', text: 'const ' },
-  { type: 'function', text: 'developer' },
+  { type: 'function', text: 'engineer' },
   { type: 'brace', text: ' = {' },
   { type: 'property', text: '  name: ' },
-  { type: 'string', text: '"Mathias"' },
+  { type: 'string', text: '"Mathias Aidoo"' },
   { type: 'brace', text: ',' },
   { type: 'property', text: '  location: ' },
   { type: 'string', text: '"Kumasi, Ghana 🇬🇭"' },
   { type: 'brace', text: ',' },
-  { type: 'property', text: '  role: ' },
-  { type: 'string', text: '"Full-Stack Developer"' },
+  { type: 'property', text: '  roles: ' },
+  { type: 'brace', text: '[' },
+  { type: 'string', text: '"Software Engineer"' },
   { type: 'brace', text: ',' },
+  { type: 'property', text: '         ' },
+  { type: 'string', text: '"Full-Stack Dev"' },
+  { type: 'brace', text: ',' },
+  { type: 'property', text: '         ' },
+  { type: 'string', text: '"UI/UX Designer"' },
+  { type: 'brace', text: '],' },
   { type: 'property', text: '  university: ' },
   { type: 'string', text: '"Kumasi Technical University"' },
   { type: 'brace', text: ',' },
@@ -28,7 +35,7 @@ const codeLines = [
   { type: 'brace', text: ', ' },
   { type: 'string', text: '"Python"' },
   { type: 'brace', text: ', ' },
-  { type: 'string', text: '"Node.js"' },
+  { type: 'string', text: '"Flutter"' },
   { type: 'brace', text: '],' },
   { type: 'property', text: '  available: ' },
   { type: 'keyword', text: 'true' },
@@ -79,7 +86,7 @@ function CodeWindow() {
           <span className="w-3 h-3 rounded-full bg-[#ff5f57]" />
           <span className="w-3 h-3 rounded-full bg-[#febc2e]" />
           <span className="w-3 h-3 rounded-full bg-[#28c840]" />
-          <span className="ml-3 text-xs text-text-muted font-mono">developer.js</span>
+          <span className="ml-3 text-xs text-text-muted font-mono">engineer.ts</span>
         </div>
 
         {/* Code body */}
@@ -152,9 +159,9 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-text-muted text-lg leading-relaxed max-w-xl mb-10"
             >
-              Software Developer &amp; Data Enthusiast based in Kumasi, Ghana. I craft
-              responsive web applications, intelligent data solutions, and elegant
-              interfaces that solve real problems.
+              Software Engineer, Full-Stack Developer &amp; UI/UX Designer based in
+              Kumasi, Ghana. I build secure, scalable applications — from mobile apps
+              and web platforms to intelligent data solutions and elegant interfaces.
             </motion.p>
 
             {/* CTA Buttons */}

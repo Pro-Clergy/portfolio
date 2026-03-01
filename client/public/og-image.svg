@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
   <rect width="1200" height="630" fill="#0a0a0f"/>
   <rect x="60" y="60" width="1080" height="510" rx="24" fill="#12121a" stroke="#1a1a26" stroke-width="2"/>
-  <text x="120" y="220" font-family="system-ui, sans-serif" font-size="72" font-weight="800" fill="#e8e6e3">Mathias</text>
-  <text x="120" y="300" font-family="system-ui, sans-serif" font-size="36" font-weight="400" fill="#8a8a9a">Full-Stack Developer &amp; Data Enthusiast</text>
+  <text x="120" y="220" font-family="system-ui, sans-serif" font-size="64" font-weight="800" fill="#e8e6e3">Mathias Aidoo</text>
+  <text x="120" y="300" font-family="system-ui, sans-serif" font-size="34" font-weight="400" fill="#8a8a9a">Software Engineer &amp; Full-Stack Developer</text>
   <line x1="120" y1="340" x2="400" y2="340" stroke="#00e5a0" stroke-width="3"/>
-  <text x="120" y="400" font-family="system-ui, sans-serif" font-size="24" fill="#546e7a">React &bull; Next.js &bull; Node.js &bull; Python &bull; MongoDB</text>
+  <text x="120" y="400" font-family="system-ui, sans-serif" font-size="24" fill="#546e7a">React &bull; Next.js &bull; Flutter &bull; Python &bull; Node.js</text>
   <text x="120" y="460" font-family="system-ui, sans-serif" font-size="20" fill="#546e7a">Kumasi, Ghana 🇬🇭</text>
   <rect x="900" y="140" width="200" height="200" rx="100" fill="#00e5a0" opacity="0.1"/>
   <text x="1000" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="100" font-weight="800" fill="#00e5a0">M</text>

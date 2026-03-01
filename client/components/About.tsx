@@ -13,19 +13,26 @@ const techStack = [
   'Next.js',
   'Node.js',
   'Express',
+  'Flutter',
+  'Dart',
+  'React Native',
   'HTML/CSS',
   'SQL',
-  'Pandas',
-  'Scikit-learn',
-  'Git',
   'Tailwind CSS',
+  'Figma',
   'MongoDB',
   'PostgreSQL',
+  'Git',
+  'Docker',
+  'Linux',
+  'Wireshark',
+  'Pandas',
+  'Scikit-learn',
 ];
 
 const stats = [
   { value: '10+', label: 'Projects Built' },
-  { value: '5+', label: 'Technologies' },
+  { value: '8+', label: 'Technologies' },
   { value: '3+', label: 'Years Coding' },
 ];
 
@@ -59,22 +66,28 @@ export default function About() {
             animate={inView ? 'show' : 'hidden'}
           >
             <motion.p variants={fadeUp} className="text-text-muted text-lg leading-relaxed mb-5">
-              I&apos;m Mathias, a Computer Science student at Kumasi Technical University with a
-              deep passion for building things that live on the internet. My journey in tech
-              started with curiosity and quickly grew into a full-on love for solving problems
-              through code.
+              I&apos;m Mathias Aidoo, a Computer Science student at Kumasi Technical
+              University with a deep passion for engineering software that makes an impact.
+              My journey in tech started with curiosity about how systems work and quickly
+              grew into a career-defining pursuit spanning multiple disciplines.
             </motion.p>
             <motion.p variants={fadeUp} className="text-text-muted text-lg leading-relaxed mb-5">
-              I specialize in full-stack web development — building responsive, user-centric
-              applications from the database layer to the pixel. I&apos;m equally fascinated
-              by data science and machine learning, having led a data mining project that
-              analyzed 5,000+ retail transactions across 8 Ghanaian cities using clustering,
-              association rules, and predictive modeling.
+              I work across the full stack — from designing intuitive interfaces in Figma
+              to building robust backends and deploying to the cloud. I also develop cross-platform
+              mobile applications with Flutter and React Native, and I&apos;m deeply invested
+              in cybersecurity, applying secure-by-design principles to everything I build.
+              As a system analyst, I enjoy breaking down complex business requirements into
+              clean, maintainable architectures.
+            </motion.p>
+            <motion.p variants={fadeUp} className="text-text-muted text-lg leading-relaxed mb-5">
+              On the data side, I led a research project analyzing 5,000+ retail transactions
+              across 8 Ghanaian cities using clustering, association rules, and predictive
+              modeling — turning raw numbers into business intelligence.
             </motion.p>
             <motion.p variants={fadeUp} className="text-text-muted text-lg leading-relaxed mb-8">
-              When I&apos;m not coding, I&apos;m exploring new technologies, contributing to open-source,
-              or brainstorming SaaS ideas. I believe great software should be functional,
-              beautiful, and accessible to everyone.
+              When I&apos;m not coding, I&apos;m exploring emerging technologies, contributing
+              to open-source, or brainstorming the next SaaS idea. I believe great
+              software should be functional, beautiful, secure, and accessible to everyone.
             </motion.p>
 
             {/* Tech stack pills */}

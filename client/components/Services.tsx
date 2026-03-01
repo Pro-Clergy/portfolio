@@ -8,6 +8,8 @@ import {
   Palette,
   Zap,
   Database,
+  Smartphone,
+  ShieldCheck,
   Rocket,
 } from 'lucide-react';
 import SectionHeader from './SectionHeader';
@@ -20,28 +22,40 @@ const services = [
       'Responsive, performant web applications built with modern frameworks. From landing pages to full-stack platforms — optimized for speed and scalability.',
   },
   {
+    icon: Smartphone,
+    title: 'Mobile App Development',
+    description:
+      'Cross-platform mobile applications with Flutter and React Native. Native-quality experiences on iOS and Android from a single codebase.',
+  },
+  {
+    icon: Palette,
+    title: 'UI/UX Design',
+    description:
+      'Intuitive, accessible interfaces where aesthetics meet usability. Wireframes, prototypes, and pixel-perfect designs in Figma that convert visitors into customers.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Cybersecurity',
+    description:
+      'Secure-by-design applications with threat modeling, vulnerability assessment, and hardened infrastructure. Protecting data and systems from modern threats.',
+  },
+  {
+    icon: Zap,
+    title: 'API & Backend Engineering',
+    description:
+      'Robust RESTful APIs and backend services. Scalable architectures with authentication, rate limiting, and comprehensive documentation.',
+  },
+  {
     icon: BarChart3,
     title: 'Data Analysis & ML',
     description:
       'Transform raw data into actionable insights. Customer segmentation, predictive modeling, and visualization dashboards that drive smarter decisions.',
   },
   {
-    icon: Palette,
-    title: 'UI/UX Design',
-    description:
-      'Intuitive, accessible interfaces where aesthetics meet usability. Designs that convert visitors into customers and make complex workflows simple.',
-  },
-  {
-    icon: Zap,
-    title: 'API Development',
-    description:
-      'Robust RESTful APIs and backend services. Scalable architectures with proper authentication, rate limiting, and comprehensive documentation.',
-  },
-  {
     icon: Database,
-    title: 'Database Design',
+    title: 'System Analysis & Design',
     description:
-      'Efficient SQL and NoSQL architectures. Optimized queries, data modeling, migration strategies, and performance tuning for growing applications.',
+      'Break down complex business requirements into clean architectures. Database modeling, migration strategies, and performance tuning for growing applications.',
   },
   {
     icon: Rocket,
@@ -65,7 +79,7 @@ export default function Services() {
 
         <div
           ref={ref}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"
         >
           {services.map((service, i) => {
             const Icon = service.icon;
