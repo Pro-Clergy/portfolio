@@ -13,7 +13,9 @@
     "axios": "^1.6.8",
     "framer-motion": "^11.0.8",
     "lucide-react": "^0.356.0",
+    "mongoose": "^9.2.3",
     "next": "^14.2.35",
+    "nodemailer": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.0",
@@ -23,6 +25,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
+    "@types/nodemailer": "^7.0.11",
     "@types/react": "^18.2.63",
     "@types/react-dom": "^18.2.19",
     "autoprefixer": "^10.4.18",

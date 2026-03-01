@@ -4,13 +4,10 @@
   "description": "Full-stack developer portfolio for Mathias — CS student at Kumasi Technical University",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "dev:5001": "concurrently \"SERVER_PORT=5001 npm run dev:server\" \"npm run dev:client\"",
-    "dev:client": "cd client && npm run dev",
-    "dev:server": "cd server && npm run dev",
+    "dev": "cd client && npm run dev",
     "build": "cd client && npm run build",
-    "start": "cd server && npm start",
-    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "start": "cd client && npm start",
+    "install:all": "cd client && npm install",
     "lint": "cd client && npm run lint"
   },
   "devDependencies": {
