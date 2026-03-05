@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Syne, DM_Sans, JetBrains_Mono } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
+import ChatWidget from '@/components/ChatWidget';
 import './globals.css';
 
 const syne = Syne({
@@ -147,6 +148,7 @@ export default function RootLayout({
           Skip to content
         </a>
         {children}
+        <ChatWidget />
         <Toaster
           position="bottom-right"
           toastOptions={{
